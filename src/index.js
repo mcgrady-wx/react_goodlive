@@ -4,6 +4,8 @@ import "./static/css/common.less"
 import "./static/css/font.css"
 import "./static/css/iconfont.css"
 
+import AppRouter from "./router/AppRouter"
 
-ReactDOM.render(<h1>呵呵</h1>,document.getElementById('root'))
+
+ReactDOM.render(<AppRouter />,document.getElementById('root'))
 
