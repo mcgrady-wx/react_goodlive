@@ -3,23 +3,30 @@ import HomeHeader from './HomeHeader'
 import Swiper from "../../components/Swiper"
 import HomeHot from './HomeHot'
 import FootNav from "../../components/FootNav"
-
+import { connect } from "react-redux"
 
 // 引入图片
 import banner1 from "../../static/images/banner1.png"
 import banner2 from "../../static/images/banner2.png"
 import banner3 from "../../static/images/banner3.png"
 
-export default class Home extends React.Component{
+class Home extends React.Component{
 	render(){
 		return (
 			<div>
-				<HomeHeader />
+				<HomeHeader city={this.props.city.cityName}/>
 				<Swiper banners={[banner1,banner2,banner3]}/>
-				<HomeHot />
+				<HomeHot city={this.props.city.cityName}/>
 				<FootNav />
 			</div>
 		)
 	}
 }
 
+const mapStateToProps= (state)=>{
+    return{
+        city:state.city
+    }
+}
+
+export default connect(mapStateToProps)(Home)

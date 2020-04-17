@@ -11,7 +11,9 @@ export default class HomeHot extends React.Component{
         }
 	}
 	componentDidMount(){
-		api.homehot.homehot1Data()
+		// 读取city
+        const city = this.props.city || localStorage.getItem("city") || '北京';
+		api.homehot.homehot1Data(city)
             .then(res => res.json())
             .then(data => {
                 this.setState({
@@ -20,7 +22,7 @@ export default class HomeHot extends React.Component{
             })
             
 
-        api.homehot.homehot2Data()
+        api.homehot.homehot2Data(city)
             .then(res => res.json())
             .then(data => {
                 this.setState({
@@ -39,7 +41,7 @@ export default class HomeHot extends React.Component{
 				}
 				{
 					homehot2.length > 0?
-                    <HomeHotView data={ homehot2 } title={ '热销单品' }/>
+                    <HomeHotView data={ homehot2 } title={ '家庭常用' }/>
                     : <div>正在请求数据</div>
 				}
 			</div>

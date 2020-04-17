@@ -6,6 +6,16 @@ import "./static/css/iconfont.css"
 
 import AppRouter from "./router/AppRouter"
 
+import { createStore } from 'redux';
+import { Provider } from "react-redux";
+import reducers from './store/reducers';
 
-ReactDOM.render(<AppRouter />,document.getElementById('root'))
+const store=createStore(reducers,window.__REDUX_DEVTOOLS_EXTENSION__ ? window.__REDUX_DEVTOOLS_EXTENSION__() :undefined)
+
+ReactDOM.render(
+	<Provider store={store}>
+		<AppRouter />
+	</Provider>,
+	document.getElementById('root')
+)
 

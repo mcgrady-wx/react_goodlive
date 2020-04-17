@@ -1,4 +1,4 @@
-/*网络请求方式*/
+/*处理网络请求方式*/
 
 import qs from "querystring"
 
