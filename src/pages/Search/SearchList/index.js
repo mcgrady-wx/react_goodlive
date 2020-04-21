@@ -52,7 +52,13 @@ export default class SearchList extends React.Component{
 		})
 		this.http(city,prevProps.content,0)
 	}
-	
+	//组件卸载，需要重置state，如果网速过慢，再异步请求的时候发送跳转会报错，所有要重置state
+	componentWillUnmount(){
+		// 清除state的值
+		this.setState=(state,callback)=>{
+			return ;
+		}
+	}
 	render(){
 		return (
 			<div>

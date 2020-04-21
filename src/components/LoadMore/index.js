@@ -30,7 +30,10 @@ export default class LoadMore extends React.Component {
 		}
 		
 	}
-	
+	//组件卸载，清除滚动事件监听
+	componentWillUnmount(){
+		window.onscroll=null
+	}
     render() {
         return (
             <div ref={this.load}>
