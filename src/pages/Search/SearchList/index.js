@@ -76,6 +76,7 @@ export default class SearchList extends React.Component{
 			</div>
 		)
 	}
+	//加载更多
 	loadMoreHandler(){
 		let city=this.props.city
 		let content=this.props.content
