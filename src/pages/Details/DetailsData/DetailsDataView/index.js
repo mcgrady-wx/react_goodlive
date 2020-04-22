@@ -3,6 +3,7 @@ import DetailsHeader from '../../../../components/Header'
 import DetailsSwiper from '../../../../components/Swiper'
 import Tabs from '../../../../components/Tabs'
 import CommentView from '../CommentView'
+import StoreBuy from '../StoreBuy'
 import './style.less'
 
 export default class DetailsDataView extends React.Component{
@@ -46,6 +47,7 @@ export default class DetailsDataView extends React.Component{
 		                        <p>年代：{data.info.years}</p>
 		                    </div>
 		                </div>
+		                <StoreBuy />
 	                </tab>
 	                <tab name="房屋评价">
 	                	<CommentView comments={comments} onLoadMore={this.props.onLoadMore} hasMore={this.props.hasMore}/>
