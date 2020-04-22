@@ -60,7 +60,7 @@ export default class DetailsData extends React.Component{
 			<div>
 				{
 					this.state.datas.imgs&&this.state.comments?
-					<DetailsDataView data={this.state.datas} comments={this.state.comments} hasMore={this.state.hasMore} onLoadMore={this.commentLoadMore.bind(this)}/>
+					<DetailsDataView id={this.props.id} data={this.state.datas} comments={this.state.comments} hasMore={this.state.hasMore} onLoadMore={this.commentLoadMore.bind(this)}/>
 					:<div>数据请求中</div>
 				}
 			</div>

@@ -47,7 +47,7 @@ export default class DetailsDataView extends React.Component{
 		                        <p>年代：{data.info.years}</p>
 		                    </div>
 		                </div>
-		                <StoreBuy />
+		                <StoreBuy id={this.props.id}/>
 	                </tab>
 	                <tab name="房屋评价">
 	                	<CommentView comments={comments} onLoadMore={this.props.onLoadMore} hasMore={this.props.hasMore}/>
