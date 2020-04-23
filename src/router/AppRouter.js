@@ -10,6 +10,7 @@ import Shop from "../pages/Shop"
 import City from "../pages/City"
 import Details from "../pages/Details"
 import Search from "../pages/Search"
+import ShopCar from "../pages/ShopCar"
 import Login from "../pages/Login"
 import NotFound from "../pages/NotFound"
 
@@ -23,6 +24,7 @@ export default class AppRouter extends React.Component{
 	                    <Route path="/life" component={Life}></Route>
 	                    <Route path="/shop" component={Shop}></Route>
 	                    <Route path="/mine" component={Mine}></Route>
+	                    <Route path="/shopcar" component={ShopCar}></Route>
 	                    <Route path="/city" component={City}></Route>
 	                    <Route path="/login" component={Login}></Route>
 	                    <Route path="/search/:content" component={Search}></Route>
