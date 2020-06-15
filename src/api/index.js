@@ -6,5 +6,5 @@ import order from "./order"
 import ordercomment from './ordercomment'
 
 export default{
-    homehot,search,details,order,ordercomment
+    homehot,search,details,order,ordercomment,comment
 }
